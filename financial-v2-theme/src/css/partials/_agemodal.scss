@@ -1,0 +1,63 @@
+/*================================================
+Age Modal CSS
+=================================================*/
+@import 'variables';
+.yui3-skin-sam {
+    .yui3-widget-mask {
+        z-index: 999 !important;
+        opacity: .8;
+    }
+    .yui3-widget-modal {
+        z-index: 1000 !important;
+        outline: 0px;
+
+        .modal-content {
+            background-color: #ffffff;
+            border: solid 2px $f-secondary;
+
+            .modal-header, .modal-footer {
+                justify-content: center;
+                border: 0
+            }
+
+            .modal-body {
+                margin-top: 20px;
+                text-align: center;
+                color: $f-primary;
+                
+                h1, h2, h3 {
+                    color: $f-primary;
+                }
+
+                .btn-toolbar {
+                    justify-content: center;
+                    margin-top: 30px;
+
+                    .btn-toolbar-button {
+                        border-radius: 50%;
+                        color: $f-primary;
+                        border: solid 2px $f-primary;
+                        background-color: #ffffff;
+                        margin: 0px 20px;
+                        font-size: 20px;
+                        width: 70px;
+                        height: 70px;
+                        text-align: center;
+                        display: block;
+                        text-transform: uppercase;
+                        padding: 7px;
+                        text-decoration: none;
+                        -webkit-transition: 0.5s;
+                        transition: 0.5s;
+
+                        &:hover {
+                            background-color: $f-primary;
+                            color: #ffffff;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

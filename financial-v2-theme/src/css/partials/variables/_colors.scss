@@ -1,0 +1,16 @@
+$f-primary: #005611;
+$f-info: #7BC6DC;
+$f-secondary: #7ab800;
+$f-success: #57D192;
+$f-background: #ffffff;
+$f-text: #212529;
+
+@mixin info-deg {
+    background: -webkit-gradient(linear, left top, right top, from($f-primary), to($f-secondary));
+    background: linear-gradient(90deg, $f-primary 0%, $f-secondary 100%);
+}
+
+@mixin info-deg-rev {
+    background: -webkit-gradient(linear, left top, right top, from($f-secondary), to($f-primary));
+    background: linear-gradient(90deg, $f-secondary 0%, $f-primary 100%);
+}
