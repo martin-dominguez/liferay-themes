@@ -2,9 +2,10 @@
 
 <#include init />
 
+<#assign showcontrolmenu = false />
 <#if is_signed_in>
     <#assign roles = user.getRoles() 
-           showcontrolmenu = true
+        showcontrolmenu = true
     />
     <#list roles as role>
           <#if role.getName() == "Employee" >
@@ -50,12 +51,33 @@
 							</#if>
 						</a>
 
-						<#assign preferences = freeMarkerPortletPreferences.getPreferences({"portletSetupPortletDecoratorId": "barebone", "destination": "/search"}) />
-
 						<div class="autofit-col autofit-col-expand">
-							<#if show_header_search>
+							<#if show_header_search && is_signed_in>
 								<div class="justify-content-md-end mr-4 navbar-form" role="search">
-									<@liferay.search_bar default_preferences="${preferences}" />
+
+									<#if gsearch_active>
+										<#assign preferences = freeMarkerPortletPreferences.getPreferences(
+											{
+												"portletSetupPortletDecoratorId": "barebone",
+												"showListed": "false",
+												"targetPortletId": ""
+											}
+										) />
+
+										<@liferay_portlet["runtime"]
+											defaultPreferences="${preferences}"
+											portletProviderAction=portletProviderAction.VIEW
+											portletName="gsearchminiportlet"
+										/>
+									<#else>
+										<#assign preferences = freeMarkerPortletPreferences.getPreferences(
+											{
+												"portletSetupPortletDecoratorId": "barebone", 
+												"destination": "/search"
+											}
+										) />
+										<@liferay.search_bar default_preferences="${preferences}" />
+									</#if>
 								</div>
 							</#if>
 						</div>
@@ -81,6 +103,22 @@
 				</div>
 			</div>
 		</header>
+	</#if>
+
+	<#if is_portlet_page>
+		<section class="bg-info">
+			<div class="container py-3">
+				<div class="row ">
+					<div class="col-md-12">
+						<div id="fragment-0-dmvb"> 
+							<h1 class="component-heading mb-0 pb-0 text-white text-left text-break fragment-heading-text-colored">
+								<span>${layout.getName(locale)}</span>
+							</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 	</#if>
 
 	<section class="${portal_content_css_class}" id="content">

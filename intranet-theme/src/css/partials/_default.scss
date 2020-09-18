@@ -1,0 +1,48 @@
+@import 'colors';
+/************************************************************ 
+**
+**                     1. GLOBAL STYLES
+** 
+************************************************************/
+body,html {
+    margin:0;
+    padding:0;
+    height:100%;
+    width:100%;
+}
+
+body { 
+    -webkit-font-smoothing:antialiased;
+    overflow-x: hidden;
+}
+
+
+a,a:focus,
+a:hover,
+button:hover,
+input[type=submit]{
+    text-decoration:none;
+    -webkit-transition-duration:.4s;
+    -moz-transition-duration:.4s;
+    transition-duration:.4s;
+}
+
+button:focus, input:focus { outline:0 }
+
+img{ max-width:100% }
+
+body, p { 
+    color: $text;
+    font-family: 'Roboto', sans-serif;;
+    font-size: 14px;
+}
+#page-wrapper, #footer, #header {
+    -webkit-transition: padding-left .5s;
+    -moz-transition: padding-left .5s;
+    transition: padding-left .5s;
+}
+
+@import 'navigation';
+@import 'toolbar';
+@import 'rightnav';
+@import 'content';

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Intranet</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link 
+        rel="stylesheet" 
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+        crossorigin="anonymous">
+
+
+    <link 
+        rel="stylesheet" 
+        type="text/css" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css"
+        crossorigin="anonymous"/>
+    
+    <link href="styles.css" rel="stylesheet"/>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Menu Wrapper -->
+    <div id="sidemenu-wrapper">
+        <div class="sidemenu-inner">
+            <div class="sidemenu-header">
+                <div class="logo">
+                    <!--logo standard-->
+                    <a href="#" class="real-logo standard-logo">
+                        INTRANET
+                    </a>
+                    
+                    <!--mini logo - when sidemenu is minimized-->
+                    <a href="#" class="mini-logo standard-logo">
+                        IN
+                    </a>
+                </div>
+            </div>
+    
+            <div class="sidemenu-main">
+                <div class="sidemenu-main-inner">
+                    <div class="scroll-container-wrapper">
+                        <div class="scroll-container">
+                            <div class="menu-section click-menu">
+                                <ul id="menu-side" class="menu-list">
+                                    <li class="menu-item current">
+                                        <a title="Dashboard" href="#">
+                                            <i class="icon-large icon-dashboard"></i> 
+                                            <span>Dashboard</span>
+                                        </a>
+                                    </li>
+                                    <li class="menu-item has-submenu">
+                                        <a title="My Tasks" href="#">
+                                            <i class="icon-large icon-tasks"></i> 
+                                            <span>My Tasks</span>
+                                        </a> 
+                                        <span class="menu-arrow"></span>
+                                        <ul class="submenu">
+                                            <li class="menu-item ">
+                                                <a title="Manage Tasks" href="#">
+                                                    <span>Manage Tasks</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Menu Wrapper -->
+
+    <!-- START HEADER -->
+    <header class="header">
+        <!-- Start Toolbar -->
+        <div class="toolbar">
+            <div class="header-left">
+                <a href="#" class="sidemenu-trigger">
+                        <i class="icon-large icon-list">
+                        </i>
+                </a>
+            </div>
+            <div class="search-form-wrapper">
+                <form id="searchform" class="search-form" method="get" action="@" data-context="">
+                    <input id="main-search" class="header-search" autocomplete="off" required="" type="text" name="s" value="" placeholder="Search">
+                    <button type="submit" class="header-search-button"></button>
+                    <div class="search-style-default" style="opacity: 1;"></div>
+                </form>									
+            </div>
+            <div class="nav-buttons active">
+                <!-- SIDEBAR TOGGLE -->
+                <a href="javascript:void(0)" id="nav-sidebar-trigger"><i class="icon-arrow-right"></i></a>
+                
+                <!-- NAV USER -->
+                <a href="javascript:void(0);" id="user-thumb">                                         
+                    <img alt="" 
+                        src="https://demos.alkalab.com/woffice/business/wp-content/uploads/avatars/3/58ecd943d58d5-bpfull.jpg" 
+                        srcset="https://demos.alkalab.com/woffice/business/wp-content/uploads/avatars/3/58ecd943d58d5-bpfull.jpg 2x" 
+                        class="rounded-circle" height="36" width="36">
+                    <span>Hey dude!</span>
+                </a>
+            </div>
+        </div>
+        <!-- End Toolbar -->
+
+    </header>
+    <!-- END HEADER-->
+
+    <!-- Start Content-->
+    <div id="page-wrapper">
+        <!-- Start Right navigation -->
+        <aside id="right-sidebar">
+            <div class="widget">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit quo cum perspiciatis quasi assumenda quas deleniti nesciunt, 
+                dignissimos culpa neque, aut facere? Qui dolor temporibus architecto nulla ipsa libero enim?
+            </div>
+        </aside>
+        <!-- End Right Navigation -->
+        <!-- Start Main Content-->
+        <div class="main-content">
+            <div class="banner-container">
+                <div class="banner-inside">
+                    <h1 class="ml1">
+                        <span class="text-wrapper">
+                            <span class="line line1"></span>
+                            <span class="letters">Dashboard</span>
+                            <span class="line line2"></span>
+                        </span>
+                        </h1>
+                </div>
+            </div>
+            <div class="content-container">
+                <div class="content">
+
+                </div>
+            </div>
+
+        </div>
+        <!-- End Main Content -->
+
+    </div>
+    <!-- End Content -->
+
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="${footer_lg_class} col-sm-6 col-md-6">
+                    <div class="single-footer-widget">
+                        <div class="logo">
+                            <a class="navbar-brand-footer" href="${site_default_url}">
+                                <img alt="${logo_description}" class="mr-2" height="42" src="${site_logo}" />
+                                <#if show_site_name>
+                                        <h1 class="font-weight-light ml-1 mb-0 text-dark text-uppercase">${site_name}</h1>
+                                </#if>
+                            </a>
+                            <p>${company_description}</p>
+                        </div>
+                        <#if show_social_icons>
+                        <ul class="social-links">
+                            <#if facebook_url?has_content>
+                                <li><a target="_blank" href="${facebook_url}"><i class="icon icon-facebook"></i></a></li>
+                            </#if>
+                            <#if twitter_url?has_content>
+                                <li><a target="_blank" href="${twitter_url}"><i class="icon icon-twitter"></i></a></li>
+                            </#if>
+                            <#if instagram_url?has_content>
+                                <li><a target="_blank" href="${instagram_url}"><i class="icon icon-instagram"></i></a></li>
+                            </#if>
+                            <#if linkedin_url?has_content>
+                                <li><a target="_blank" href="${linkedin_url}"><i class="icon icon-linkedin"></i></a></li>
+                            </#if>
+                        </ul>
+                        </#if>
+                    </div>
+                </div>
+                <#if show_footer_company_navigation>
+                    <div class="${footer_lg_class} col-sm-6 col-md-6">
+                        <div class="single-footer-widget">
+                                <#assign preferences = freeMarkerPortletPreferences.getPreferences("portletSetupPortletDecoratorId", "borderless") />
+    
+                                <@liferay_portlet["runtime"]
+                                    defaultPreferences=preferences
+                                    instanceId="company_navigation"
+                                    portletName="com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet"
+                                />
+                        </div>
+                    </div>
+                </#if>
+                <#if show_footer_support_navigation>
+                    <div class="${footer_lg_class} col-sm-6 col-md-6">
+                        <div class="single-footer-widget">
+                                <#assign preferences = freeMarkerPortletPreferences.getPreferences("portletSetupPortletDecoratorId", "borderless") />
+    
+                                <@liferay_portlet["runtime"]
+                                    defaultPreferences=preferences
+                                    instanceId="support_navigation"
+                                    portletName="com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet"
+                                />
+                        </div>
+                    </div>
+                </#if>
+                <div class="${footer_lg_class} col-sm-6 col-md-6">
+                    <div class="single-footer-widget">
+                        <h2>Address</h2>
+                        <ul class="footer-contact-info">
+                            <li>
+                                <span class="mr-1"><i class="icon icon-map-marker"></i>  Location:</span>
+                                <a target="_blank" href="https://maps.google.com/?q=${location}">${location}</a>
+                            </li>
+                            <li>
+                                <span class="mr-1"><i class="icon icon-envelope-alt"></i>  Email:</span>
+                                <a href="mailto:${email}">${email}</a>
+                            </li>
+                            <li>
+                                <span class="mr-1"><i class="icon icon-phone"></i>  Phone:</span>
+                                <a href="tel:${phone}">${phone}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-area">
+                <p>© <span id="spanYear">2020</span> Liferay - All rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- START JS LINKS-->
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous"></script>
+    <script 
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
+        crossorigin="anonymous"></script>
+    <script 
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="init.js"></script>
+    <!-- END JS LINKS-->
+</body>
+</html>

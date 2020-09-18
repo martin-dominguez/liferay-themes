@@ -1,0 +1,36 @@
+/************************************************************ 
+**
+**                    5. CONTENT
+** 
+************************************************************/
+#page-wrapper {
+    height:auto;
+    overflow:initial;
+    padding-top: 60px;
+    padding-left: 250px;
+}
+
+.main-content {
+    width: 75%;
+    -webkit-transition: width .6s;
+    -moz-transition: width .6s;
+    transition: width .6s;
+}
+
+@media only screen and (min-width: 480px) {
+    #page-wrapper {
+        padding-left: 60px;
+    }
+}
+@media only screen and (min-width: 993px) {
+    #page-wrapper {
+        padding-left: 250px;
+
+        &.sidebar-hidden .main-content {
+            width: 100%;
+        }
+    }
+    .sidemenu-is-closed #page-wrapper {
+        padding-left: 60px;
+    }
+}

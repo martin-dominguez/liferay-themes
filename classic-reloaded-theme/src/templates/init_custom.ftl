@@ -3,6 +3,7 @@
 	show_header = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-header"))
 	show_header_search = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-header-search"))
 	wrap_widget_page_content = getterUtil.getBoolean(themeDisplay.getThemeSetting("wrap-widget-page-content"))
+	gsearch_active = getterUtil.getBoolean(themeDisplay.getThemeSetting("gsearch-active"))
 />
 
 <#if wrap_widget_page_content && (layout.getType() == "portlet")>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE layout-templates PUBLIC "-//Liferay//DTD Layout Templates 7.2.0//EN" "http://www.liferay.com/dtd/liferay-layout-templates_7_2_0.dtd">
+
+<layout-templates>
+	<custom>
+		<layout-template id="full-intranet" name="Full Intranet">
+			<template-path>/layouttpl/custom/full-intranet-layouttpl/full_intranet.ftl</template-path>
+			<thumbnail-path>/layouttpl/custom/full-intranet-layouttpl/full_intranet.png</thumbnail-path>
+		</layout-template>
+	</custom>
+</layout-templates>

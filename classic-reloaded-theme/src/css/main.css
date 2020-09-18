@@ -3706,6 +3706,18 @@ div.splitter {
       .portlet-hello-world .portlet .portlet-content .portlet-body {
         padding-right: 60%; } }
 
+#footer .portlet-navigation .portlet {
+  margin-bottom: 0; }
+  #footer .portlet-navigation .portlet a {
+    color: #fff; }
+    #footer .portlet-navigation .portlet a:hover {
+      color: #fff;
+      text-decoration: underline; }
+
+@media screen and (max-width: 992px) {
+  #footer .portlet-navigation {
+    display: none; } }
+
 body header .field-wrapper {
   position: absolute;
   right: 4px;
