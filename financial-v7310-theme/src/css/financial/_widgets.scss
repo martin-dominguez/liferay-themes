@@ -1,7 +1,9 @@
 /*================================================
 Liferay Widgets CSS
 =================================================*/
+
 @import 'utils/mixins';
+
 /** Global **/
 #content {
     .portlet-decorate, .portlet-borderless {
@@ -17,7 +19,7 @@ Liferay Widgets CSS
             &:before {
                 content: '';
                 position: absolute;
-                @include info-deg;
+                @include btn-deg;
                 bottom: -1px;
                 left: 0;
                 width: 50px;
@@ -56,7 +58,7 @@ Liferay Widgets CSS
                 top: 0;
                 width: 100%;
                 height: 100%;
-                @include info-deg;
+                @include btn-deg;
                 z-index: -1;
                 opacity: 0;
                 visibility: hidden;
@@ -101,7 +103,7 @@ Customer Area Widgets CSS
             &:before {
                 content: '';
                 position: absolute;
-                @include info-deg;
+                @include btn-deg;
                 bottom: -1px;
                 left: 0;
                 width: 50px;

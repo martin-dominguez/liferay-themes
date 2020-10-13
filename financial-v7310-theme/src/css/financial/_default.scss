@@ -1,7 +1,6 @@
 /*================================================
 Default CSS
 =================================================*/
-@import 'utils/variables';
 @import 'utils/mixins';
 
 body {
@@ -99,7 +98,7 @@ p {
     padding: 0 15px;
     font-size: 16px;
     line-height: 50px;
-    color: $f-text;
+    color: $ft-text;
     background-color: #ffffff;
     border: 1px solid #eeeeee;
     border-radius: 0;

@@ -16,7 +16,7 @@ Mixins
 
 @mixin alt-btn-deg {
     background: -webkit-gradient(linear, left top, right top, from($ft-altbutton-primary), to($ft-altbutton-secondary));
-    background: linear-gradient(90deg, $ft-altbutton-primary 0%, $ft-altbutton-secondaryy 100%);
+    background: linear-gradient(90deg, $ft-altbutton-primary 0%, $ft-altbutton-secondary 100%);
 }
 
 @mixin alt-btn-deg-rev {
