@@ -6,7 +6,7 @@ Footer Area CSS
     position: relative;
     z-index: 1;
     padding-top: 80px;
-    background-color: $dark;
+    @include frontend-token(background-color, --dark, $dark);
 }
   
 .single-footer-widget {
@@ -25,7 +25,7 @@ Footer Area CSS
 
             &:hover {
                 padding-left: 5px;
-                color: $primary;
+                @include frontend-token(color, --primary, $primary);
             }
         }
         p {
@@ -46,7 +46,7 @@ Footer Area CSS
         overflow: visible;
 
         &::before {
-            background: $primary;
+            @include frontend-token(background-color, --primary, $primary);
             content: '';
             position: absolute;
             bottom: -1px;
@@ -74,7 +74,7 @@ Footer Area CSS
 
                 &:hover {
                     padding-left: 5px;
-                    color: $primary;
+                    @include frontend-token(color, --primary, $primary);
                 }
             }
 
@@ -102,7 +102,7 @@ Footer Area CSS
                 display: inline-block;
 
                 &:hover {
-                    color: $primary;
+                    @include frontend-token(color, --primary, $primary);
                 }
             }
 
@@ -129,21 +129,21 @@ Footer Area CSS
             margin-top: 10px;
 
             a {
-                background-color: $body-bg;
+                @include frontend-token(background-color, --body-bg, $body-bg);
                 width: 30px;
                 text-align: center;
                 line-height: 29px;
                 height: 30px;
                 border: 1px solid #ece9e9;
                 border-radius: 50%;
-                color: $primary;
+                @include frontend-token(color, --primary, $primary);
                 display: inline-block;
                 font-size: 12px;
                 
                 &:hover {
                     color: #ffffff;
-                    border-color: $primary;
-                    background-color: $primary;
+                    @include frontend-token(background-color, --primary, $primary);
+                    @include frontend-token(border-color, --primary, $primary);
                 }
             }
         }
@@ -168,7 +168,7 @@ Footer Area CSS
             font-weight: 400;
         }
         &:hover {
-            color: $primary;
+            @include frontend-token(color, --primary, $primary);
         }
            
     }

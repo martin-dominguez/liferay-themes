@@ -2,8 +2,6 @@
 Liferay Widgets CSS
 =================================================*/
 
-@import 'utils/mixins';
-
 /** Global **/
 #content {
     .portlet-decorate, .portlet-borderless {
@@ -70,7 +68,7 @@ Liferay Widgets CSS
 
             &:hover, &:focus {
                 color: #ffffff;
-                border-color: $primary;
+                @include frontend-token(border-color, --primary, $primary);
             }
 
             &:hover::before, &:focus::before {

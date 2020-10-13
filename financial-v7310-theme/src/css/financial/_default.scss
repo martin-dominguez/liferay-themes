@@ -6,9 +6,9 @@ Default CSS
 body {
     padding: 0;
     margin: 0;
-    font-family: $ft-font;
+    @include frontend-token(font-family, --ft-font, $ft-font);
     font-size: 16px;
-    color: $ft-text;
+    @include frontend-token(color, --ft-text, $ft-text);
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -36,7 +36,7 @@ a {
     outline: 0 !important;
 
     &:hover {
-        color: $primary;
+        @include frontend-token(color, --primary, $primary);
         text-decoration: none;
     }
 }
@@ -71,9 +71,9 @@ button {
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-    font-family: $ft-font;
+    @include frontend-token(font-family, --ft-nav-font, $ft-nav-font);
+    @include frontend-token(color, --ft-text, $ft-text);
     font-weight: 600;
-    color: $ft-text;
 }
 
 p {
@@ -98,7 +98,7 @@ p {
     padding: 0 15px;
     font-size: 16px;
     line-height: 50px;
-    color: $ft-text;
+    @include frontend-token(color, --ft-text, $ft-text);
     background-color: #ffffff;
     border: 1px solid #eeeeee;
     border-radius: 0;
@@ -108,7 +108,7 @@ p {
     &:focus {
         -webkit-box-shadow: unset !important;
                 box-shadow: unset !important;
-        border-color: $primary;
+        @include frontend-token(border-color, --primary, $primary);
     }
 }
 

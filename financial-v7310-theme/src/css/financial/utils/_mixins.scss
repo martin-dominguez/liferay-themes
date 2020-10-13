@@ -4,22 +4,32 @@ Mixins
 
 @import 'variables';
 
+// Mixin for frontend tokens
+@mixin frontend-token($property, $token, $defaultValue) {
+	#{$property}: $defaultValue;
+	#{$property}: var($token, $defaultValue);
+}
+
 @mixin btn-deg {
-    background: -webkit-gradient(linear, left top, right top, from($primary), to($secondary));
-    background: linear-gradient(90deg, $primary 0%, $secondary 100%);
+    background: -webkit-gradient(linear, left top, right top, from(var(--primary, $primary)), to(var(--secondary, $secondary)));
+    background: linear-gradient(90deg, var(--primary, $primary) 0%, var(--secondary, $secondary) 100%);
 }
 
 @mixin btn-deg-rev {
-    background: -webkit-gradient(linear, left top, right top, from($secondary), to($primary));
-    background: linear-gradient(90deg, $secondary 0%, $primary 100%);
+    background: -webkit-gradient(linear, left top, right top, from(var(--secondary, $secondary)), to(var(--primary, $primary)));
+    background: linear-gradient(90deg, var(--secondary, $secondary) 0%, var(--primary, $primary) 100%);
 }
 
 @mixin alt-btn-deg {
-    background: -webkit-gradient(linear, left top, right top, from($ft-altbutton-primary), to($ft-altbutton-secondary));
-    background: linear-gradient(90deg, $ft-altbutton-primary 0%, $ft-altbutton-secondary 100%);
+    background: -webkit-gradient(
+        linear, left top, right top, from(var(--ft-altbutton-primary, $ft-altbutton-primary)), to(var(--ft-altbutton-secondary, $ft-altbutton-secondary))
+    );
+    background: linear-gradient(90deg, var(--ft-altbutton-primary, $ft-altbutton-primary) 0%, var(--ft-altbutton-secondary, $ft-altbutton-secondary) 100%);
 }
 
 @mixin alt-btn-deg-rev {
-    background: -webkit-gradient(linear, left top, right top, from($ft-altbutton-secondary), to($ft-altbutton-primary));
-    background: linear-gradient(90deg, $ft-altbutton-secondary 0%, $ft-altbutton-primary 100%);
+    background: -webkit-gradient(
+        linear, left top, right top, from(var(--ft-altbutton-secondary, $ft-altbutton-secondary)), to(var(--ft-altbutton-primary, $ft-altbutton-primary))
+    );
+    background: linear-gradient(90deg, var(--ft-altbutton-secondary, $ft-altbutton-secondary) 0%, var(--ft-altbutton-primary, $ft-altbutton-primary) 100%);
 }

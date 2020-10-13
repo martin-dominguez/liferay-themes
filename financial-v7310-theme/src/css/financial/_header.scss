@@ -1,8 +1,6 @@
 /*================================================
 Navbar Area CSS
 =================================================*/ 
-@import 'utils/mixins';
-@import 'utils/variables';
 
 // Admin control
 .has-control-menu {
@@ -31,7 +29,7 @@ Navbar Area CSS
   padding-bottom: 0;
   padding-right: 0;
   padding-left: 0;
-  font-family: $ft-nav-font;
+  @include frontend-token(font-family, --ft-nav-font, $ft-nav-font);
 
   .navbar {
     padding-right: 0;
@@ -79,7 +77,7 @@ Navbar Area CSS
         padding-right: 0;
 
         a {
-          color: $ft-nav-default-color;
+          @include frontend-token(color, --ft-nav-default-color, $ft-nav-default-color);
           padding-right: 0;
           padding-top: 0;
           padding-bottom: 0;
@@ -94,13 +92,13 @@ Navbar Area CSS
         }
 
         &:hover a, &:focus a, &.active a {
-          color: $primary;
+          @include frontend-token(color, --primary, $primary);
         }  
 
         .dropdown-menu {
           -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
                   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
-          background: $ft-nav-bgcolor;
+          @include frontend-token(background-color, --ft-nav-bgcolor, $ft-nav-bgcolor);
           position: absolute;
           border: none;
           top: 80px;
@@ -127,12 +125,12 @@ Navbar Area CSS
             a {
               padding: 7px 15px;
               margin: 0;
-              color: $ft-text;
+              @include frontend-token(color, --ft-text, $ft-text);
               font-size: 15px;
               font-weight: 400;
 
               &:hover, &:focus, &.active {
-                color: $primary;
+                @include frontend-token(color, --primary, $primary);
               }
             }
 
@@ -144,10 +142,10 @@ Navbar Area CSS
 
               li {
                 a {
-                  color: $ft-text;
+                  @include frontend-token(color, --ft-text, $ft-text);
 
                   &:hover, &:focus, &.active {
-                    color: $primary;
+                    @include frontend-token(color, --primary, $primary);
                   }
                 }
 
@@ -159,10 +157,10 @@ Navbar Area CSS
                   
                   li {
                     a {
-                      color: $ft-text;
+                      @include frontend-token(color, --ft-text, $ft-text);
                       
                       &:hover, &:focus, &.active {
-                        color: $primary;
+                        @include frontend-token(color, --primary, $primary);
                       }
                     }
                     
@@ -174,10 +172,10 @@ Navbar Area CSS
                       
                       li {
                         a {
-                          color: $ft-text;
+                          @include frontend-token(color, --ft-text, $ft-text);
                           
                           &:hover, &:focus, &.active {
-                            color: $primary;
+                            @include frontend-token(color, --primary, $primary);
                           }
                         }
 
@@ -189,10 +187,10 @@ Navbar Area CSS
                           
                           li {
                             a {
-                              color: $ft-text;
+                              @include frontend-token(color, --ft-text, $ft-text);
                               
                               &:hover, &:focus, &.active {
-                                color: $primary;
+                                @include frontend-token(color, --primary, $primary);
                               }
                             }
                           }
@@ -205,7 +203,7 @@ Navbar Area CSS
                         }
 
                         &.active a { 
-                          color: $primary;
+                          @include frontend-token(color, --primary, $primary);
                         }
                       }
                     }
@@ -217,7 +215,7 @@ Navbar Area CSS
                     }
 
                     &.active a { 
-                      color: $primary;
+                      @include frontend-token(color, --primary, $primary);
                     }
                   } 
                 }
@@ -229,7 +227,7 @@ Navbar Area CSS
                 }
 
                 &.active a { 
-                  color: $primary;
+                  @include frontend-token(color, --primary, $primary);
                 }
               }
             }
@@ -241,7 +239,7 @@ Navbar Area CSS
             }
 
             &.active a { 
-              color: $primary;
+              @include frontend-token(color, --primary, $primary);
             }
           }
         }
@@ -260,14 +258,14 @@ Navbar Area CSS
       z-index: 4;
 
       .login-btn, .sign-in {
-        color: $ft-nav-default-color;
+        @include frontend-token(color, --ft-nav-default-color, $ft-nav-default-color);
         font-size: 17px;
         font-weight: 400;
-        font-family: $ft-nav-font;
+        @include frontend-token(font-family, --ft-nav-font, $ft-nav-font);
 
         i, .lexicon-icon {
           margin-right: 5px;
-          color: $primary;
+          @include frontend-token(color, --primary, $primary);
         }
       }
 
@@ -316,7 +314,7 @@ Navbar Area CSS
     z-index: 988;
     -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
             box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
-    background-color: $ft-nav-bgcolor !important;
+    @include frontend-token(background-color, --ft-nav-bgcolor, $ft-nav-bgcolor);
     -webkit-animation: 1000ms ease-in-out 0s normal none 1 running fadeInDown;
             animation: 1000ms ease-in-out 0s normal none 1 running fadeInDown;
     -webkit-transition: 1s;
@@ -325,80 +323,79 @@ Navbar Area CSS
     .navbar-brand img {
         &:nth-child(1) {
           display: none;
-          height: $ft-logo-defaulth;
         }
         
         &:nth-child(2) {
           display: block;
-          height: $ft-logo-stickyh;
+          @include frontend-token(height, --ft-logo-stickyh, $ft-logo-stickyh);
         }
     }
 
     .financial-nav .navbar .navbar-nav .nav-item {
       a {
-        color: $ft-text;
+        @include frontend-token(color, --ft-text, $ft-text);
       }
 
       &:hover a, &.hover a, &.active a {
-        color: $primary;
+        @include frontend-token(color, --primary, $primary);
       }
 
       .dropdown-menu li {
         a {
-          color: $ft-text;
+          @include frontend-token(color, --ft-text, $ft-text);
         }
 
         .dropdown-menu li {
           a {
-            color: $ft-text;
+            @include frontend-token(color, --ft-text, $ft-text);
           }
 
           .dropdown-menu li {
             a {
-              color: $ft-text;
+              @include frontend-token(color, --ft-text, $ft-text);
             }
 
             .dropdown-menu li {
               a {
-                color: $ft-text;
+                @include frontend-token(color, --ft-text, $ft-text);
               }
 
               .dropdown-menu li {
                 a {
-                  color: $ft-text;
+                  @include frontend-token(color, --ft-text, $ft-text);
                 }
 
                 &:hover a, &.hover a, &.active a {
-                  color: $primary;
+                  @include frontend-token(color, --primary, $primary);
                 }
               }
 
               &:hover a, &.hover a, &.active a {
-                color: $primary;
+                @include frontend-token(color, --primary, $primary);
               }
             }
 
             &:hover a, &.hover a, &.active a {
-              color: $primary;
+              @include frontend-token(color, --primary, $primary);
             }
           }
 
           &:hover a, &.hover a, &.active a {
-            color: $primary;
+            @include frontend-token(color, --primary, $primary);
           }
         }    
 
         &:hover a, &.hover a, &.active a {
-          color: $primary;
+          @include frontend-token(color, --primary, $primary);
         }
       }
     }
 
     .financial-nav .navbar .others-options .sign-in {
-      color: $ft-text;
+      @include frontend-token(color, --ft-text, $ft-text);
 
       &:hover, i, .lexicon-icon {
-        color: $primary;
+        @include frontend-token(color, --primary, $primary);
       }
     }
   }
@@ -409,6 +406,7 @@ Navbar Area CSS
     .navbar-brand img {
       &:nth-child(1) {
         display: block;
+        @include frontend-token(height, --ft-logo-defaulth, $ft-logo-defaulth);
       }
       
       &:nth-child(2) {
@@ -441,16 +439,16 @@ Navbar Area CSS
     position: relative;
 
     .navbar-brand {
-      color: $ft-text;
+      @include frontend-token(color, --ft-text, $ft-text);
 
       img {
-        height: $ft-logo-mobileh;
+        @include frontend-token(height, --ft-logo-mobileh, $ft-logo-mobileh);
       }
     }
 
     .financial-nav .navbar {
       .navbar-nav .nav-item a, .others-options .sign-in{
-        color: $ft-text;
+        @include frontend-token(color, --ft-text, $ft-text);
       }
     }
 
@@ -491,7 +489,7 @@ Search CSS
     position: relative;
     display: block;
     z-index: inherit;
-    color: $primary;
+    @include frontend-token(color, --primary, $primary);
     text-decoration: none;
     margin-top: 6px;
   
@@ -517,8 +515,8 @@ Search CSS
       width: 100%;
       border: 0;
       opacity: 0;
-      color: $ft-text;
-      background-color: $ft-nav-bgcolor;
+      @include frontend-token(color, --ft-text, $ft-text);
+      @include frontend-token(background-color, --ft-nav-bgcolor, $ft-nav-bgcolor);
       height: 80px;
       max-height: 0;
       transition: all 0.3s;
@@ -543,7 +541,8 @@ Search CSS
         max-height: 80px;
     
         &:focus {
-          outline: solid 1px $primary;
+          outline: solid 1px;
+          @include frontend-token(outline-color, --primary, $primary);
           outline-offset: 0;
         }
       }

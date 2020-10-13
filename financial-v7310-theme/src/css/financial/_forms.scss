@@ -1,7 +1,6 @@
 /*================================================
 Forms CSS
 =================================================*/
-@import 'utils/mixins';
 
 .portlet-forms-display {
     .ddm-form-name {
@@ -60,7 +59,7 @@ Forms CSS
             -webkit-box-shadow: 0px 5px 28.5px 1.5px rgba(149, 152, 200, 0.2) !important;
                     box-shadow: 0px 5px 28.5px 1.5px rgba(149, 152, 200, 0.2) !important;
             height: 50px;
-            font-family: $ft-nav-font;
+            @include frontend-token(font-family, --ft-nav-font, $ft-nav-font);
             font-size: 14.5px;
         }
 

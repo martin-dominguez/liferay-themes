@@ -25,13 +25,13 @@ Backgrounds CSS
 }
 
 .bg-primary {
-	background-color: $primary !important;
+	@include frontend-token(background-color, --primary, $primary);
 }
 
 .bg-secondary {
-	background-color: $secondary !important;
+	@include frontend-token(background-color, --secondary, $secondary);
 }
 
 .bg-info {
-	background-color: $info !important;
+	@include frontend-token(background-color, --info, $info);
 }

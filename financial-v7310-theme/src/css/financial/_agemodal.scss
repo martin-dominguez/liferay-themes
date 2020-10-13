@@ -12,7 +12,8 @@ Age Modal CSS
 
         .modal-content {
             background-color: #ffffff;
-            border: solid 2px $secondary;
+            border: solid 2px;
+            @include frontend-token(border-color, --secondary, $secondary);
 
             .modal-header, .modal-footer {
                 justify-content: center;
@@ -22,10 +23,10 @@ Age Modal CSS
             .modal-body {
                 margin-top: 20px;
                 text-align: center;
-                color: $primary;
+                @include frontend-token(color, --primary, $primary);
                 
                 h1, h2, h3 {
-                    color: $primary;
+                    @include frontend-token(color, --primary, $primary);
                 }
 
                 .btn-toolbar {
@@ -34,8 +35,9 @@ Age Modal CSS
 
                     .btn-toolbar-button {
                         border-radius: 50%;
-                        color: $primary;
-                        border: solid 2px $primary;
+                        @include frontend-token(color, --primary, $primary);
+                        border: solid 2px;
+                        @include frontend-token(border-color, --primary, $primary);
                         background-color: #ffffff;
                         margin: 0px 20px;
                         font-size: 20px;
@@ -50,7 +52,7 @@ Age Modal CSS
                         transition: 0.5s;
 
                         &:hover {
-                            background-color: $primary;
+                            @include frontend-token(background-color, --primary, $primary);
                             color: #ffffff;
                         }
                     }
