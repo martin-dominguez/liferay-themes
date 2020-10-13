@@ -44,6 +44,7 @@ Navbar Area CSS
       img {
         -webkit-transition: 0.5s;
         transition: 0.5s;
+        @include frontend-token(height, --ft-logo-defaulth, $ft-logo-defaulth);
         
         &:nth-child(2) {
           display: none;
@@ -406,7 +407,6 @@ Navbar Area CSS
     .navbar-brand img {
       &:nth-child(1) {
         display: block;
-        @include frontend-token(height, --ft-logo-defaulth, $ft-logo-defaulth);
       }
       
       &:nth-child(2) {

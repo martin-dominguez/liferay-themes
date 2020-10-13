@@ -31,7 +31,7 @@
 			<setting configurable="true" key="phone" type="text" value=""/>
 			<setting configurable="true" key="company-description" type="text" value="Quis ipsum suspendisse ultrices gravida commodo. Risus commodo veliliee vel viverra maecenas accumsan lacus vel facilisis
 "/>
-			<setting configurable="true" key="show-loader" type="checkbox" value="true"/>
+			<setting configurable="true" key="show-preloader" type="checkbox" value="false"/>
 			<setting configurable="true" key="show-gotop-button" type="checkbox" value="true"/>
 		</settings>
 		<portlet-decorator id="barebone" name="Barebone">

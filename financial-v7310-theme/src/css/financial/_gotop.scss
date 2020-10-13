@@ -7,7 +7,7 @@ Go Top CSS
     cursor: pointer;
     bottom: 15px;
     right: 15px;
-    @include btn-deg();
+    @include btn-deg;
     z-index: 4;
     width: 40px;
     text-align: center;

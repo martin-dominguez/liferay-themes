@@ -41,30 +41,31 @@
 				<#include "${full_templates_path}/footer.ftl" />
 			</#if>
 
+			<#if show_gotop_button>
+				<div class="go-top"><i class="icon icon-arrow-up"></i></div>
+			</#if>
+			<#if show_sticky_header>
+				<#if fix_menu_login_status>
+					<div class="fix-menu"></div>
+				</#if>
+				<script type="text/javascript" src="${sticky_js_file}"></script>
+			</#if>
+			<#if show_preloader>
+				<div class="preloader"><div class="loader"><div class="shadow"></div><div class="box"></div></div></div>
+			</#if>
+			<#if !is_signed_in>
+				<#if show_age_modal>
+					<div class="yui3-skin-sam">
+						<div id="age-modal"></div>
+					</div>
+					<script type="text/javascript" src="${age_modal_js}"></script>
+				</#if>
+			</#if>
+
 		</div>
 
 		<@liferay_util["include"] page=body_bottom_include />
 
 		<@liferay_util["include"] page=bottom_include />
-		<#if show_sticky_header>
-			<#if fix_menu_login_status>
-				<div class="fix-menu"></div>
-			</#if>
-			<script type="text/javascript" src="${sticky_js_file}"></script>
-		</#if>
-		<#if show_preloader>
-			<div class="preloader"><div class="loader"><div class="shadow"></div><div class="box"></div></div></div>
-		</#if>
-		<#if show_gotop_button>
-			<div class="go-top"><i class="icon icon-arrow-up"></i></div>
-		</#if>
-		<#if !is_signed_in>
-			<#if show_age_modal>
-				<div class="yui3-skin-sam">
-					<div id="age-modal"></div>
-				</div>
-				<script type="text/javascript" src="${age_modal_js}"></script>
-			</#if>
-		</#if>
 	</body>
 </html>
