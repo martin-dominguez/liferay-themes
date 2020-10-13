@@ -1,0 +1,37 @@
+/*================================================
+Backgrounds CSS
+=================================================*/
+
+.bg-image {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	&.bg-image-contain {
+		background-size: contain;
+	}
+
+	&.bg-image-left {
+		background-position: left;
+	}
+
+	&.bg-image-right {
+		background-position: right;
+	}
+}
+
+.bg-white-10 {
+	background-color: rgba(white, 0.1) !important;
+}
+
+.bg-primary {
+	background-color: $primary !important;
+}
+
+.bg-secondary {
+	background-color: $secondary !important;
+}
+
+.bg-info {
+	background-color: $info !important;
+}
