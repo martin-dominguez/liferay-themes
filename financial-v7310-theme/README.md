@@ -5,10 +5,10 @@ A simple Liferay theme that allows for easy customization of the color scheme us
 ## Set Up
 
 1. `npm install`
-2. `npm run init`
+2. `npm run init` (Configure your Liferay Server)
 3. `npm run deploy`
 
-![screenshot](/images/thumbnail.png)
+![thumbnail](/src/images/thumbnail.png)
 
 ## Features
 
