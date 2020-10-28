@@ -79,6 +79,9 @@ Liferay Widgets CSS
               }
 
         }
+        li[class^="tag-popularity-"] {
+            font-size: 1em;
+        }
     }
 }
 

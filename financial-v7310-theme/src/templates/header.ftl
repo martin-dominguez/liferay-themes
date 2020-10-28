@@ -28,6 +28,16 @@
                     />
                     <div class="others-options">
                         <@liferay.user_personal_bar />
+
+						<#if show_language_selector>
+                            <#assign preferences = freeMarkerPortletPreferences.getPreferences("portletSetupPortletDecoratorId", "barebone") />
+
+                            <@liferay_portlet["runtime"]
+                                defaultPreferences=preferences
+                                portletProviderAction=portletProviderAction.VIEW
+                                portletProviderClassName="com.liferay.portal.kernel.servlet.taglib.ui.LanguageEntry"
+                            />
+						</#if>
                     </div>
                 </div>
                  <#if show_header_search>

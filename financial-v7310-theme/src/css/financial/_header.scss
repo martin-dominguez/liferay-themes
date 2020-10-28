@@ -239,8 +239,11 @@ Navbar Area CSS
               top: -15px;
             }
 
-            &.active a { 
-              @include frontend-token(color, --primary, $primary);
+            &.active {
+              background-color: transparent;
+              a { 
+                @include frontend-token(color, --primary, $primary);
+              }
             }
           }
         }
