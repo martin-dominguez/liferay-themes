@@ -1,7 +1,6 @@
 <!-- Theme configuration -->
 <#assign
 	show_age_modal = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-age-modal"))
-	show_site_name = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-site-name"))
 	show_header = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-header"))
 	show_sticky_header = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-sticky-header"))
 	fix_menu_login_status = getterUtil.getBoolean(themeDisplay.getThemeSetting("fix-menu-login-status"))

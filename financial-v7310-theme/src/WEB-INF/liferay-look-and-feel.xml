@@ -25,7 +25,6 @@
 			<setting configurable="true" key="instagram-url" type="text" value=""/>
 			<setting configurable="true" key="linkedin-url" type="text" value=""/>
 			<setting configurable="true" key="wrap-widget-page-content" type="checkbox" value="true"/>
-			<setting configurable="true" key="show-site-name" type="checkbox" value="true"/>
 			<setting configurable="true" key="location" type="text" value=""/>
 			<setting configurable="true" key="email" type="text" value=""/>
 			<setting configurable="true" key="phone" type="text" value=""/>
