@@ -256,7 +256,7 @@ Navbar Area CSS
       }
     }
 
-    .others-options {
+    .other-options {
       margin-left: 25px;
       padding: 10px 0px;
       z-index: 4;
@@ -395,7 +395,8 @@ Navbar Area CSS
       }
     }
 
-    .financial-nav .navbar .others-options .sign-in {
+    .financial-nav .navbar .other-options .sign-in,
+    .financial-nav .navbar .other-options .portlet-language .dropdown .dropdown-toggle  {
       @include frontend-token(color, --ft-text, $ft-text);
 
       &:hover, i, .lexicon-icon {
@@ -450,7 +451,9 @@ Navbar Area CSS
     }
 
     .financial-nav .navbar {
-      .navbar-nav .nav-item a, .others-options .sign-in{
+      .navbar-nav .nav-item a, 
+      .other-options .sign-in,
+      .other-options .portlet-language .dropdown .dropdown-toggle {
         @include frontend-token(color, --ft-text, $ft-text);
       }
     }
@@ -467,7 +470,67 @@ Navbar Area CSS
     font-size: 14px;
   }
 }
+/*================================================
+Search Button, Language selector and Personal Bar CSS
+=================================================*/
+.financial-nav {
+  .other-options {
+    margin-left: 25px;
+    padding: 10px 0px;
+    z-index: 4;
 
+    /** PERSONAL BAR **/
+    .portlet-user-personal-bar {
+      float: left;
+      margin-right: 10px;
+      line-height: 40px;
+
+      .login-btn, .sign-in {
+        color: #ffffff;
+        font-size: 17px;
+        font-weight: 400;
+        @include frontend-token(font-family, --ft-nav-font, $ft-nav-font);
+    
+        i, .lexicon-icon {
+          margin-right: 5px;
+          @include frontend-token(color, --primary, $primary);;
+        }
+      }
+    
+      .user-avatar-link {
+        display: block;
+        position: relative;
+    
+        .panel-notifications-count {
+            margin: 0;
+            position: absolute;
+            right: calc(100% - 0.75rem);
+            top: -0.35rem;
+        }
+      }
+    }
+  
+    /** LANG SELECTOR **/
+    .portlet-language {
+      float: left;
+
+      .portlet-content {
+        background-color: transparent !important;
+      }
+
+      .dropdown {
+        .dropdown-toggle {
+          background-color: transparent;
+          border: 0px;
+          color: var(--white);
+        }
+      }
+    }
+
+  }
+
+  
+}
 
 /*================================================
 Search CSS

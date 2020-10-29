@@ -26,12 +26,10 @@
                         instanceId="primary_navigation"
                         portletName="com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet"
                     />
-                    <div class="others-options">
+                    <div class="other-options">
                         <@liferay.user_personal_bar />
 
 						<#if show_language_selector>
-                            <#assign preferences = freeMarkerPortletPreferences.getPreferences("portletSetupPortletDecoratorId", "barebone") />
-
                             <@liferay_portlet["runtime"]
                                 defaultPreferences=preferences
                                 portletProviderAction=portletProviderAction.VIEW
