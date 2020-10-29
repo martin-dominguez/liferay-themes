@@ -47,7 +47,7 @@ Buttons CSS
             width: 100%;
             height: 100%;
             z-index: -1;
-            @include btn-deg-rev;
+            @include alt-btn-deg;
             border-radius: 4px;
             -webkit-transition: 0.5s;
             transition: 0.5s;
@@ -99,7 +99,7 @@ Buttons CSS
     &-primary {
         &:hover, 
         &:focus {
-            @include alt-btn-deg;
+            @include btn-deg;
             color: #ffffff !important;
             -webkit-box-shadow: unset !important;
                     box-shadow: unset !important;
