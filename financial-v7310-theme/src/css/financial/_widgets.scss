@@ -48,6 +48,7 @@ Liferay Widgets CSS
             position: relative;
             margin-top: 8px;
             margin-right: 4px;
+            z-index: 0;
 
             &::before {
                 content: '';
@@ -111,5 +112,16 @@ Customer Area Widgets CSS
                 height: 2.2px;
             }
         }
+    }
+}
+
+/*================================================
+Agent Area Portlets CSS
+=================================================*/
+#wrapper {
+    .notifications-portlet,
+    .portlet-users-admin,
+    .portlet-workflow-tasks {
+        margin-top: 105px;
     }
 }
