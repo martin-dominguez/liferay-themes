@@ -7,6 +7,7 @@ AUI().ready('liferay-sign-in-modal', 'event-outside', 'transition', function(A) 
     var portlet_my_account = A.one("#portlet_com_liferay_my_account_web_portlet_MyAccountPortlet");
     var portlet_workflow = A.one("#_com_liferay_portal_workflow_task_web_portlet_MyWorkflowTaskPortlet_form");
     var portlet_workflow_tasks = A.one(".portlet-workflow-tasks");
+    var change_tracking_indicator = A.one(".change-tracking-indicator");
     
     if ((portlet_login || portlet_status || portlet_notifications || portlet_my_account || portlet_workflow || portlet_workflow_tasks) && (fix_menu)) {
         A.one('.navbar-area').addClass('is-sticky');
@@ -16,9 +17,13 @@ AUI().ready('liferay-sign-in-modal', 'event-outside', 'transition', function(A) 
             // ===== Show / Hide Sticky Menu==== 
             if ($(document).scrollTop() > 60 ) {
                 $('.navbar-area').addClass('is-sticky');
+                if (change_tracking_indicator) {
+                    $('.navbar-area').addClass('has-publications');
+                }
             } 
             else {
                 $('.navbar-area').removeClass('is-sticky');
+                $('.navbar-area').removeClass('has-publications');
             }
         });
     }
