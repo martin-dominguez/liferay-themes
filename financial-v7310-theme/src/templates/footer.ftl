@@ -77,7 +77,7 @@
             </div>
         </div>
         <div class="copyright-area">
-            <p>© <span id="spanYear">2020</span> Liferay - All rights Reserved</p>
+            <p>© <span id="spanYear">2020</span> Liferay - <@liferay_ui["message"] key="all-rights-reserved" /></p>
         </div>
     </div>
 </footer>
