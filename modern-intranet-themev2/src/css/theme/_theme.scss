@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@import 'responsive';
+@import 'mixins';
+@import 'container_fix';
+@import 'search_bar';
+@import 'vertical_navigation';
+
+#main-content {
+    margin-top: var(--spacer-7) !important;
+}
+.portlet-borderless .portlet-content {
+    padding: 0 !important;
+}
+
+.monserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.page-editor__disabled-area {
+    padding-right: 0 !important;
+}
+
+@media (min-width: 576px) {
+    .page-editor__layout-viewport--with-sidebar-open {
+        padding-right: 0 !important;
+    }
+}
+
+@media #{$mobile_device} {
+    #wrapper {
+        display: block !important;
+        flex-direction: initial;
+    }
+    #main-content,
+    .content {
+        margin-top: var(--spacer-2) !important;
+    }
+}
