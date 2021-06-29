@@ -3,23 +3,40 @@
     current_index = 0
 />
 
+<#if nav_items?has_content>
+    <#list nav_items as nav_item>
+        <#if nav_item.isSelected() || nav_item.isChildSelected() >
+            <#if nav_item.hasChildren()>
+                <#assign
+                    show_secondary = true
+                    current_index = nav_item?index
+                />
+            </#if>
+            <#break>
+        </#if>
+    </#list>
+</#if>
+
+<div id="vertical-nav-wrapper" class="d-none ${show_secondary?string('has-secondary','')}">
+</div>
+
 <div class="mobile-menu container mt-2">	
     
     <button id="mobile-toggler" class="navbar-toggler navbar-toggler-right" type="button">
-		<@liferay_ui.icon icon="bars" markupView="lexicon" />
-	</button>
+        <@liferay_ui.icon icon="bars" markupView="lexicon" />
+    </button>
 
-	<#assign search_preferences = freeMarkerPortletPreferences.getPreferences({"portletSetupPortletDecoratorId": "barebone", "destination": "/search"}) />
+    <#assign search_preferences = freeMarkerPortletPreferences.getPreferences({"portletSetupPortletDecoratorId": "barebone", "destination": "/search"}) />
 
     <div class="mi-mob-search-bar mr-2">
         <@liferay.search_bar default_preferences="${search_preferences}" />
     </div>
 
-	<@liferay.user_personal_bar />
+    <@liferay.user_personal_bar />
 
 </div>
 
-<nav id="mi-icon-menu" class="d-flex flex-column">
+<nav id="mi-icon-menu" class="flex-column">
     <span class="navbar-brand mb-5">
         <img height="56" src="${themeDisplay.getCompanyLogo()}" alt="" />
     </span>
@@ -27,35 +44,36 @@
         <ul id="mi-menu-icons" class="navbar-nav nav-stacked w-100 mb-5">	
             <#list nav_items as nav_item>
                 <#assign
-    				nav_item_css_class = ""
-    				nav_item_layout = nav_item.getLayout()
-    			/>
+                    nav_item_css_class = ""
+                    nav_item_layout = nav_item.getLayout()
+                />
                 <#if nav_item.isSelected() || nav_item.isChildSelected() >
-        			<#assign nav_item_css_class = "selected active" /><#if nav_item.hasChildren()>
+                    <#assign nav_item_css_class = "selected active" />
+                    <#if nav_item.hasChildren()>
                         <#assign
                             show_secondary = true
                             current_index = nav_item?index
                         />
                     </#if>
-        		</#if>
-        		<#assign layout_icon = " " />
-        		<#if nav_item_layout.getExpandoBridge().hasAttribute("icon")>
-        			<#if nav_item_layout.getExpandoBridge().getAttribute("icon")??>
-        				<#assign layout_icon = nav_item_layout.getExpandoBridge().getAttribute("icon") />
-        			</#if>
-        		</#if>
-    			<li class="item-icon ${nav_item_css_class} d-flex justify-content-center w-100 my-3">
-    				<@liferay_ui.icon icon="${layout_icon}" markupView="lexicon" />
-    			</li>
-        	</#list>
+                </#if>
+                <#assign layout_icon = " " />
+                <#if nav_item_layout.getExpandoBridge().hasAttribute("icon")>
+                    <#if nav_item_layout.getExpandoBridge().getAttribute("icon")??>
+                        <#assign layout_icon = nav_item_layout.getExpandoBridge().getAttribute("icon") />
+                    </#if>
+                </#if>
+                <li class="item-icon ${nav_item_css_class} d-flex justify-content-center w-100 my-3">
+                    <@liferay_ui.icon icon="${layout_icon}" markupView="lexicon" />
+                </li>
+            </#list>
         </ul>
     </#if>
     <div class="personal-bar mt-auto mb-4">
-		<@liferay.user_personal_bar />
-	</div>
+        <@liferay.user_personal_bar />
+    </div>
 </nav>
 
-<nav id="mi-menu" class="navbar flex-column align-items-start monserrat ${show_secondary?string('has-secondary','')}">
+<nav id="mi-menu" class="navbar flex-column align-items-start monserrat">
     <a class="navbar-brand d-flex align-items-center mb-5 pl-5" href="${themeDisplay.getURLHome()}">
         <img height="56" src="${themeDisplay.getCompanyLogo()}" alt="" />
         <h2 class="m-0 text-dark">${htmlUtil.escape(themeDisplay.getLayout().getGroup().getDescriptiveName())}</h2>
@@ -66,20 +84,20 @@
                 <#assign nav_item_css_class = "" />
 
                 <#if nav_item.isSelected() || nav_item.isChildSelected()>
-        			<#assign nav_item_css_class = "selected active" />
-        		</#if>
+                    <#assign nav_item_css_class = "selected active" />
+                </#if>
 
                 <li class="item ${nav_item_css_class} w-100 pl-6 my-3">
                     <a href="${nav_item.getURL()}">
                         ${nav_item.getName()}
                     </a>
                 </li>
-        	</#list>
+            </#list>
         </ul>
     </#if>
     <div class="personal-bar pl-6 mt-auto mb-4">
-		<@liferay.user_personal_bar />
-	</div>
+        <@liferay.user_personal_bar />
+    </div>
 </nav>
 
 <#if show_secondary>
@@ -89,15 +107,15 @@
                 <#assign nav_item_css_class = "" />
 
                 <#if nav_child.isSelected()>
-        			<#assign nav_item_css_class = "selected active" />
-        		</#if>
+                    <#assign nav_item_css_class = "selected active" />
+                </#if>
 
                 <#assign layout_icon = " " />
-        		<#if nav_item_layout.getExpandoBridge().hasAttribute("icon")>
-        			<#if nav_item_layout.getExpandoBridge().getAttribute("icon")??>
-        				<#assign layout_icon = nav_item_layout.getExpandoBridge().getAttribute("icon") />
-        			</#if>
-        		</#if>
+                <#if nav_item_layout.getExpandoBridge().hasAttribute("icon")>
+                    <#if nav_item_layout.getExpandoBridge().getAttribute("icon")??>
+                        <#assign layout_icon = nav_item_layout.getExpandoBridge().getAttribute("icon") />
+                    </#if>
+                </#if>
 
                 <li class="item-child ${nav_item_css_class} w-100 my-1" >
                     <a href="${nav_child.getURL()}">

@@ -31,12 +31,6 @@ AUI().ready(function () {
         mobileButton.addEventListener('click', () => {
             miMenu.classList.toggle('active');
         });
-
-        // Hide icon menu when secondary menu is active
-        if (! miMenu.classList.contains('has-secondary')) {
-            iconMenu.classList.remove('d-flex');
-            iconMenu.classList.add('d-none');
-        }
     }
 });
 
