@@ -3,6 +3,8 @@
     align-items: center;
     width: 74px;
     display: none;
+    height: 100vh;
+    position: fixed;
 
     .item-icon .lexicon-icon {
         fill: var(--body-color);
@@ -29,20 +31,17 @@
 }
 
 #mi-menu {
-    height: 100%;
+    height: 100vh;
     width: 375px;
     border-right: solid 1px var(--light);
     font-weight: 300;
     top: 0;
-    position: relative;
+    position: fixed;
     left: 0px;
     z-index: 988;
     background-color: #fff;
     transition: left .3s ease-in-out;
-
-    &.active {
-        left: 0px !important;
-    }
+    flex-wrap: nowrap;
 
     .navbar {
         justify-content: flex-start;
@@ -69,8 +68,8 @@
     }       
 }
 
-body.open #mi-menu.active {
-    left: 320px;
+#content {
+    margin-left: 375px;
 }
 
 #mi-menu .personal-bar .sticker-circle,
@@ -87,21 +86,47 @@ body.open #mi-menu.active {
 #vertical-nav-wrapper.has-secondary{
     ~ nav#mi-menu {
         left: -375px;
-        position: absolute !important;
+        display: flex;
+
+        &.active {
+            left: 0px;
+        }
     }
 
     ~ nav#mi-icon-menu {
         display: flex;
     }
+
+    ~ div#content  {
+        margin-left: auto;
+    }
 }
+
+
+body.open #mi-menu,
+body.open #vertical-nav-wrapper.has-secondary ~ nav#mi-menu.active {
+    left: 320px;
+}
+
+body.has-control-menu {
+    #mi-menu {
+        top: 56px;
+        height: calc(100vh - 56px);
+    }
+    #mi-icon-menu {
+        height: calc(100vh - 56px);
+    }
+}
+
 
 #mi-secondary-menu {
     padding-top: 80px;
+    padding-left: 74px;
     width: 300px;
 
     .navbar-nav {
         justify-content: flex-start;
-        margin-right: 30%;
+        margin-right: 15%;
     }
 
     .item-child {
@@ -156,5 +181,8 @@ body.open #mi-menu.active {
     #mi-menu {
         left: -375px;
         position: absolute !important;
+    }
+    #content {
+        padding-left: 0px;
     }
 }

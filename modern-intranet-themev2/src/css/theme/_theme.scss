@@ -9,6 +9,7 @@
 #main-content {
     margin-top: var(--spacer-7) !important;
 }
+
 .portlet-borderless .portlet-content {
     padding: 0 !important;
 }
@@ -21,6 +22,12 @@
 .page-editor__layout-viewport--size-desktop {
     padding-right: 0 !important;
 }
+
+.page-editor__layout-viewport--size-tablet,
+.page-editor__layout-viewport--size-landscapeMobile,
+.page-editor__layout-viewport--size-portraitMobile {
+      z-index: 988;
+  }
 
 @media (min-width: 576px) {
     .page-editor__layout-viewport--with-sidebar-open {
