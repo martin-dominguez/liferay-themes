@@ -36,8 +36,8 @@
 }
 
 
-@media #{$mobile_device} {
+@media #{$mobile_and_tablet_devices} {
     .mi-search-bar {
-        display: none;
+        display: none !important;
     }
 }

@@ -42,6 +42,7 @@
     background-color: #fff;
     transition: left .3s ease-in-out;
     flex-wrap: nowrap;
+    overflow-y: scroll;
 
     .navbar {
         justify-content: flex-start;
@@ -65,11 +66,33 @@
             vertical-align: middle;
             display: table-cell;
         }
-    }       
+    }
+
+    /* Custom Scrollbar for menu */
+    &::-webkit-scrollbar-track {
+        width: 20px;
+    }
+
+    &::-webkit-scrollbar {
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 2px;
+        border: none;
+        background-color:var(--light);
+        background-clip: content-box;
+
+        &:hover {
+            background-color: fade-out($primary, 0.8);
+        }
+    }
 }
 
-#content {
-    margin-left: 375px;
+@media screen and #{$mid_and_large_devices} {
+    #content {
+        margin-left: 375px;
+    }
 }
 
 #mi-menu .personal-bar .sticker-circle,
@@ -166,7 +189,7 @@ body.has-control-menu {
     display: none;
 }
 
-@media #{$mobile_device} {
+@media #{$mobile_and_tablet_devices} {
     .mobile-menu {
         display: flex;
         flex-direction: row;
@@ -181,6 +204,10 @@ body.has-control-menu {
     #mi-menu {
         left: -375px;
         position: absolute !important;
+
+        &.active {
+            left: 0;
+        }
     }
     #content {
         padding-left: 0px;

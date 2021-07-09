@@ -25,8 +25,9 @@
 
 .page-editor__layout-viewport--size-tablet,
 .page-editor__layout-viewport--size-landscapeMobile,
-.page-editor__layout-viewport--size-portraitMobile {
-      z-index: 988;
+.page-editor__layout-viewport--size-portraitMobile,
+.lfr-simulation-device {
+      z-index: 988 !important;
   }
 
 @media (min-width: 576px) {
@@ -35,7 +36,7 @@
     }
 }
 
-@media #{$mobile_device} {
+@media #{$mobile_and_tablet_devices} {
     #wrapper {
         display: block !important;
         flex-direction: initial;
