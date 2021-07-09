@@ -89,7 +89,14 @@ p {
 }
 
 #content {
-    min-height: 300px;
+    min-height: 100vh;
+}
+
+// Viewport controls
+.page-editor__layout-viewport--size-tablet,
+.page-editor__layout-viewport--size-landscapeMobile,
+.page-editor__layout-viewport--size-portraitMobile {
+    z-index: 988 !important;
 }
 
 // CLAY FIXES --------------------------------------------------------------
@@ -111,6 +118,18 @@ p {
 .page-item.show .page-link {
     border: none;
     @include frontend-token(background-color, --primary, $primary);
+}
+
+/* navbar expand-lg */
+@media only screen and (min-width: 992px) {
+    .navbar-toggle {
+        display: block;
+    }
+}
+
+body.has-control-menu.publications-enabled .page-editor__sidebar {
+    height: calc(100vh - 146px);
+    top: 146px;
 }
 //---------------------------------------------------------------------------
 

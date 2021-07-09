@@ -54,4 +54,9 @@ AUI().ready('liferay-sign-in-modal', 'event-outside', 'transition', function(A) 
         e.preventDefault();
     });
 
+    // ===== Adds body controls class when publications is enabled ===
+    var publications_enabled = A.one('.change-tracking-indicator');
+    if (publications_enabled) {
+        document.body.classList.add("publications-enabled");
+    }
 });

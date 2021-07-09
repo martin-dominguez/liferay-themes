@@ -5,7 +5,7 @@
                 <#assign preferences = freeMarkerPortletPreferences.getPreferences({"portletSetupPortletDecoratorId": "barebone", "destination": "/search"}) />
                 <@liferay.search_bar default_preferences="${preferences}" />
 			</#if>
-            <nav class="navbar navbar-expand-md">
+            <nav class="navbar navbar-expand-lg">
                 <a class="navbar-brand" href="${site_default_url}">
                     <img alt="${logo_description}" class="mr-2" src="${site_logo}" />
                     <img alt="${logo_description}" class="mr-2" src="${sticky_logo}" />

@@ -442,8 +442,7 @@ Navbar Area CSS
   .navbar-area {
     border-bottom: 1px solid rgba(255, 255, 255, 0.09);
     background-color:$ft-nav-bgcolor;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 15px 0px !important;
     position: relative;
 
     .navbar-brand {
