@@ -10,6 +10,10 @@
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
 
 	<@liferay_util["include"] page=top_head_include />
+	
+	<script data-senna-off="true" src="${javascript_folder}/popper.js" type="text/javascript"></script>
+	<script data-senna-off="true" src="${javascript_folder}/owl.carousel.min.js" type="text/javascript"></script>
+
 </head>
 
 <body class="${css_class}">
@@ -49,6 +53,7 @@
 <@liferay_util["include"] page=body_bottom_include />
 
 <@liferay_util["include"] page=bottom_include />
+
 
 </body>
 
