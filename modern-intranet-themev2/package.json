@@ -16,9 +16,9 @@
 		"compass-mixins": "0.12.10",
 		"gulp": "4.0.2",
 		"liferay-frontend-common-css": "1.0.4",
-		"liferay-frontend-theme-styled": "5.0.15",
-		"liferay-frontend-theme-unstyled": "5.0.20",
-		"liferay-theme-tasks": "^10.4.0"
+		"liferay-frontend-theme-styled": "6.0.6",
+		"liferay-frontend-theme-unstyled": "6.0.7",
+		"liferay-theme-tasks": "^10.5.0"
 	},
 	"scripts": {
 		"init": "gulp init",
