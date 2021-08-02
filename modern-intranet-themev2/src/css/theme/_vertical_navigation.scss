@@ -145,7 +145,7 @@ body.has-control-menu {
 #mi-secondary-menu {
     padding-top: 80px;
     padding-left: 74px;
-    width: 300px;
+    min-width: 375px;
 
     .navbar-nav {
         justify-content: flex-start;

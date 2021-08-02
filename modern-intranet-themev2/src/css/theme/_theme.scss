@@ -28,7 +28,11 @@
 .page-editor__layout-viewport--size-portraitMobile,
 .lfr-simulation-device {
       z-index: 988 !important;
-  }
+}
+
+#content {
+    overflow-wrap: anywhere;
+}
 
 @media (min-width: 576px) {
     .page-editor__layout-viewport--with-sidebar-open {
