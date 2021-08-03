@@ -78,22 +78,38 @@
         <img height="56" src="${themeDisplay.getCompanyLogo()}" alt="" />
         <h2 class="m-0 text-dark">${htmlUtil.escape(themeDisplay.getLayout().getGroup().getDescriptiveName())}</h2>
     </a>
-    <#if nav_items?has_content>
-        <ul id="mi-menu-list" class="navbar-nav nav-stacked w-100 mb-5">
-            <#list nav_items as nav_item>
-                <#assign nav_item_css_class = "" />
+    <#if layout.isPublicLayout()>
+        <#assign ddmTemplateLocalService = serviceLocator.findService("com.liferay.dynamic.data.mapping.service.DDMTemplateLocalService")>
+        <#assign template = ddmTemplateLocalService.fetchDDMTemplate(43813)>
+        <#assign siteNavigationMenuLocalService = serviceLocator.findService("com.liferay.site.navigation.service.SiteNavigationMenuLocalService")>
+        <#assign navigationMenu = siteNavigationMenuLocalService.fetchSiteNavigationMenu(43248)>
 
-                <#if nav_item.isSelected() || nav_item.isChildSelected()>
-                    <#assign nav_item_css_class = "selected active" />
-                </#if>
+        <@liferay_site_navigation["navigation-menu"]
+            ddmTemplateGroupId=template.groupId
+            ddmTemplateKey=template.templateKey
+            displayDepth=1
+            expandedLevels="auto"
+            rootItemType="absolute"
+            rootItemLevel=0
+            siteNavigationMenuId=navigationMenu.siteNavigationMenuId />
+    <#else>
+        <#if nav_items?has_content>
+            <ul id="mi-menu-list" class="navbar-nav nav-stacked w-100 mb-5">
+                <#list nav_items as nav_item>
+                    <#assign nav_item_css_class = "" />
 
-                <li class="item ${nav_item_css_class} w-100 pl-6 my-3">
-                    <a href="${nav_item.getURL()}">
-                        ${nav_item.getName()}
-                    </a>
-                </li>
-            </#list>
-        </ul>
+                    <#if nav_item.isSelected() || nav_item.isChildSelected()>
+                        <#assign nav_item_css_class = "selected active" />
+                    </#if>
+
+                    <li class="item ${nav_item_css_class} w-100 pl-6 my-3">
+                        <a href="${nav_item.getURL()}">
+                            ${nav_item.getName()}
+                        </a>
+                    </li>
+                </#list>
+            </ul>
+        </#if>
     </#if>
     <div class="personal-bar pl-6 mt-auto mb-4">
         <@liferay.user_personal_bar />
