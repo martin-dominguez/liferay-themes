@@ -37,7 +37,7 @@
 </div>
 
 <nav id="mi-icon-menu" class="flex-column">
-    <span class="navbar-brand mb-5">
+    <span class="navbar-brand mb-5 mt-5">
         <img height="56" src="${themeDisplay.getCompanyLogo()}" alt="" />
     </span>
     <#if nav_items?has_content>
@@ -80,7 +80,9 @@
             <h2 class="m-0 text-dark">${site_name}</h2>
         </#if>
         <#if !site_name?has_content>
-            <h2 class="m-0 text-dark">Modern Intranet</h2>
+            <h2 class="m-0 text-dark">
+                ${htmlUtil.escape(themeDisplay.getLayout().getGroup().getDescriptiveName())}
+            </h2>
         </#if>
     </a>
     <#if layout.isPublicLayout()>
