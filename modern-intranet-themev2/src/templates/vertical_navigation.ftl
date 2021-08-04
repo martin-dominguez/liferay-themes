@@ -76,7 +76,12 @@
 <nav id="mi-menu" class="navbar flex-column align-items-start monserrat">
     <a class="navbar-brand d-flex align-items-center mb-5 pl-5" href="${themeDisplay.getURLHome()}">
         <img height="56" src="${themeDisplay.getCompanyLogo()}" alt="" />
-        <h2 class="m-0 text-dark">${htmlUtil.escape(themeDisplay.getLayout().getGroup().getDescriptiveName())}</h2>
+        <#if site_name?has_content>
+            <h2 class="m-0 text-dark">${site_name}</h2>
+        </#if>
+        <#if !site_name?has_content>
+            <h2 class="m-0 text-dark">Modern Intranet</h2>
+        </#if>
     </a>
     <#if layout.isPublicLayout()>
         <#assign ddmTemplateLocalService = serviceLocator.findService("com.liferay.dynamic.data.mapping.service.DDMTemplateLocalService")>
