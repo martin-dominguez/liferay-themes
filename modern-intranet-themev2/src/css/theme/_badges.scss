@@ -1,0 +1,134 @@
+/** MI Theme Badges **/
+#wrapper {
+    .mi-badge {
+        border-radius: 1em;
+
+        &-primary {
+            color: var(--primary, $primary);
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: var(--primary, $primary);
+                height: 100%;
+                width: 100%;
+                opacity: 0.1;
+                border-radius: 1em;
+            }
+        }
+
+        &-secondary {
+            color: var(--secondary, $secondary);
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: var(--secondary, $secondary);
+                height: 100%;
+                width: 100%;
+                opacity: 0.1;
+                border-radius: 1em;
+            }
+        }
+
+        &-info {
+            color: var(--info, $info);
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: var(--info, $info);
+                height: 100%;
+                width: 100%;
+                opacity: 0.1;
+                border-radius: 1em;
+            }
+        }
+
+        &-warning {
+            color: var(--warning, $warning);
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: var(--warning, $warning);
+                height: 100%;
+                width: 100%;
+                opacity: 0.1;
+                border-radius: 1em;
+            }
+        }
+
+        &-success {
+            color: var(--success, $success);
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: var(--success, $success);
+                height: 100%;
+                width: 100%;
+                opacity: 0.1;
+                border-radius: 1em;
+            }
+        }
+
+        &-danger {
+            color: var(--danger, $danger);
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: var(--danger, $danger);
+                height: 100%;
+                width: 100%;
+                opacity: 0.1;
+                border-radius: 1em;
+            }
+        }
+
+        &-dark {
+            color: var(--dark, $dark);
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: var(--dark, $dark);
+                height: 100%;
+                width: 100%;
+                opacity: 0.1;
+                border-radius: 1em;
+            }
+        }
+
+        &-light {
+            color: var(--light, $light);
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: var(--light, $light);
+                height: 100%;
+                width: 100%;
+                opacity: 0.1;
+                border-radius: 1em;
+            }
+        }
+    }
+} 

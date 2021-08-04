@@ -3,7 +3,7 @@ Arial,
 sans-serif;
 $font-secondary: 'Montserrat',
 serif;
-$primary-owl: #0B5FFF;
+$primary-owl: var(--primary);
 @mixin gradient-background() {
     background: rgba(255, 93, 177, 0);
     background: -moz-linear-gradient(top, rgba(255, 93, 177, 0) 0%, rgba(148, 54, 103, 0) 42%, rgba(0, 0, 0, 1) 100%);

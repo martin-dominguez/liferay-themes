@@ -74,7 +74,7 @@
 </nav>
 
 <nav id="mi-menu" class="navbar flex-column align-items-start monserrat">
-    <a class="navbar-brand d-flex align-items-center mb-5 pl-5" href="${themeDisplay.getURLHome()}">
+    <a class="navbar-brand d-flex align-items-center mb-5 pl-5 mt-5" href="${themeDisplay.getURLHome()}">
         <img height="56" src="${themeDisplay.getCompanyLogo()}" alt="" />
         <h2 class="m-0 text-dark">${htmlUtil.escape(themeDisplay.getLayout().getGroup().getDescriptiveName())}</h2>
     </a>

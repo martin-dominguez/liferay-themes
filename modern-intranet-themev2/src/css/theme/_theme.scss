@@ -5,6 +5,7 @@
 @import 'container_fix';
 @import 'search_bar';
 @import 'vertical_navigation';
+@import 'badges';
 
 #main-content {
     margin-top: var(--spacer-7) !important;
@@ -30,59 +31,9 @@
       z-index: 988 !important;
 }
 
-/** MI Theme Badges **/
-#wrapper {
-    .mi-badge {
-        border-radius: 1em;
-
-        &-primary {
-            color: var(--primary, $primary);
-            background-color: transparentize($primary, .7);
-        }
-
-        &-secondary {
-            color: var(--secondary, $primary);
-            background-color: transparentize($secondary, .7);
-        }
-
-        &-info {
-            color: var(--info, $primary);
-            background-color: transparentize($info, .7);
-        }
-
-        &-warning {
-            color: var(--warning, $primary);
-            background-color: transparentize($warning, .7);
-        }
-
-        &-success {
-            color: var(--success, $primary);
-            background-color: transparentize($success, .7);
-        }
-
-        &-danger {
-            color: var(--danger, $primary);
-            background-color: transparentize($danger, .7);
-        }
-
-        &-dark {
-            color: var(--dark, $primary);
-            background-color: transparentize($dark, .7);
-        }
-
-        &-light {
-            color: var(--light, $primary);
-            background-color: transparentize($light, .3);
-        }
-    }
-} 
-
-
 #content {
     overflow-wrap: anywhere;
 }
-
-//
 
 @media (min-width: 576px) {
     .page-editor__layout-viewport--with-sidebar-open {
@@ -95,8 +46,8 @@
         display: block !important;
         flex-direction: initial;
     }
-    #main-content,
-    .content {
+
+    #main-content, .content {
         margin-top: var(--spacer-2) !important;
     }
 }
