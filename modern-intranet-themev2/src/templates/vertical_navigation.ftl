@@ -134,9 +134,12 @@
                 </#if>
 
                 <#assign layout_icon = " " />
-                <#if nav_item_layout.getExpandoBridge().hasAttribute("icon")>
-                    <#if nav_item_layout.getExpandoBridge().getAttribute("icon")??>
-                        <#assign layout_icon = nav_item_layout.getExpandoBridge().getAttribute("icon") />
+                <#assign
+                    nav_item_child_layout = nav_child.getLayout()
+                />
+                <#if nav_item_child_layout.getExpandoBridge().hasAttribute("icon")>
+                    <#if nav_item_child_layout.getExpandoBridge().getAttribute("icon")??>
+                        <#assign layout_icon = nav_item_child_layout.getExpandoBridge().getAttribute("icon") />
                     </#if>
                 </#if>
 
