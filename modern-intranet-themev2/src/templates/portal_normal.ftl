@@ -28,7 +28,7 @@
 	<div class="d-flex flex-row flex-fill" id="wrapper">
 		<#include "${full_templates_path}/vertical_navigation.ftl" />
 		
-		<div class="${portal_content_css_class} flex-fill px-6" id="content">
+		<div class="${portal_content_css_class} flex-fill pr-6" id="content">
 			<div class="mi-search-bar mt-3 d-flex">
 				<div class="mr-2"><@liferay.user_personal_bar /></div>
 				<#assign preferences = freeMarkerPortletPreferences.getPreferences({"portletSetupPortletDecoratorId": "barebone", "destination": "/search"}) />
