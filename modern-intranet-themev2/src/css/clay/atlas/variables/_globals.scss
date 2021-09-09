@@ -99,7 +99,7 @@ $primary-l1: lighten($primary, 22.94) !default;
 $primary-l2: lighten($primary, 32.94) !default;
 $primary-l3: lighten($primary, 44.9) !default;
 
-$secondary: $blue !default;
+$secondary: $gray-600 !default;
 $secondary-d1: darken(saturate($secondary, 4.82), 20) !default;
 $secondary-d2: darken(saturate($secondary, 5.36), 23.92) !default;
 $secondary-l1: lighten(
