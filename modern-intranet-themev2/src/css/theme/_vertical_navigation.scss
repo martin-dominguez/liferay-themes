@@ -5,29 +5,24 @@
     display: none;
     height: 100vh;
     position: fixed;
-
     .item-icon .lexicon-icon {
         fill: var(--body-color);
         height: 2.8em;
         margin-top: -3px;
         width: 1.4em;
     }
-
     .navbar-brand {
         max-width: inherit;
     }
-
-    .item-icon{
-        border-left: solid 3px #fff;
+    .item-icon {
+        border-left: solid 6px #fff;
         height: 2.8em;
         display: table;
-
-        &.selected.active{
-            border-left: solid 3px var(--primary);
+        &.selected.active {
+            border-left: solid 6px var(--primary);
             font-weight: bold;
         }
     }
-
 }
 
 #mi-menu {
@@ -43,22 +38,18 @@
     transition: left .3s ease-in-out;
     flex-wrap: nowrap;
     overflow-y: scroll;
-
     .navbar {
         justify-content: flex-start;
     }
-
     .item {
-        border-left: solid 3px #fff;
+        border-left: solid 6px #fff;
         height: 2.8em;
         display: table;
-
         &.selected.active,
         &:hover {
-            border-left: solid 3px var(--primary);
+            border-left: solid 6px var(--primary);
             font-weight: bold;
         }
-
         a {
             font-size: 1.35em;
             color: var(--body-color);
@@ -67,22 +58,18 @@
             display: table-cell;
         }
     }
-
     /* Custom Scrollbar for menu */
     &::-webkit-scrollbar-track {
         width: 20px;
     }
-
     &::-webkit-scrollbar {
         background-color: transparent;
     }
-
     &::-webkit-scrollbar-thumb {
         border-radius: 2px;
         border: none;
-        background-color:var(--light);
+        background-color: var(--light);
         background-clip: content-box;
-
         &:hover {
             background-color: fade-out($primary, 0.8);
         }
@@ -96,7 +83,7 @@
 }
 
 #mi-menu .personal-bar .sticker-circle,
-#mi-icon-menu .personal-bar .sticker-circle{
+#mi-icon-menu .personal-bar .sticker-circle {
     border-radius: 0.25em;
     box-shadow: none;
 }
@@ -107,28 +94,24 @@
     font-size: 0.85em;
 }
 
-#vertical-nav-wrapper.has-secondary{
-    ~ nav#mi-menu {
+#vertical-nav-wrapper.has-secondary {
+    ~nav#mi-menu {
         left: -375px;
         display: flex;
-
         &.active {
             left: 0px;
         }
     }
-
-    ~ nav#mi-icon-menu {
+    ~nav#mi-icon-menu {
         display: flex;
     }
-
-    ~ div#content  {
+    ~div#content {
         margin-left: auto;
     }
 }
 
-
 body.open #mi-menu,
-body.open #vertical-nav-wrapper.has-secondary ~ nav#mi-menu.active {
+body.open #vertical-nav-wrapper.has-secondary~nav#mi-menu.active {
     left: 320px;
 }
 
@@ -142,22 +125,18 @@ body.has-control-menu {
     }
 }
 
-
 #mi-secondary-menu {
     padding-top: 80px;
     padding-left: 74px;
     min-width: 375px;
-
     .navbar-nav {
         justify-content: flex-start;
         margin-right: 15%;
     }
-
     .item-child {
         height: 1.8em;
         display: table;
         padding-left: 30%;
-
         a {
             font-size: 0.95em;
             color: var(--body-color);
@@ -166,16 +145,13 @@ body.has-control-menu {
             display: table-cell;
             padding: 1rem 1em;
             border-radius: 10px;
-
             .lexicon-icon {
                 color: fade-out($primary, 0.8);
             }
         }
-
         &.selected.active,
         &:hover {
             font-weight: bold;
-
             .lexicon-icon {
                 fill: var(--primary);
             }
@@ -198,14 +174,13 @@ body.has-control-menu {
         justify-content: flex-start;
         justify-items: flex-start;
     }
-    #mi-icon-menu, #mi-secondary-menu {
+    #mi-icon-menu,
+    #mi-secondary-menu {
         display: none !important;
     }
-
     #mi-menu {
         left: -375px;
         position: absolute !important;
-
         &.active {
             left: 0;
         }
