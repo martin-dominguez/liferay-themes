@@ -13,6 +13,7 @@
 	
 	<script data-senna-off="true" src="${javascript_folder}/popper.js" type="text/javascript"></script>
 	<script data-senna-off="true" src="${javascript_folder}/owl.carousel.min.js" type="text/javascript"></script>
+	<script data-senna-off="true" src="${javascript_folder}/toggle-control-menu.js" type="text/javascript"></script>
 
 </head>
 
@@ -23,7 +24,9 @@
 <@liferay_util["include"] page=body_top_include />
 
 <div class="d-flex flex-column min-vh-100">
-	<@liferay.control_menu />
+	<#if show_control_menu == true>
+		<@liferay.control_menu />
+	</#if>
 
 	<div class="d-flex flex-row flex-fill" id="wrapper">
 		<#include "${full_templates_path}/vertical_navigation.ftl" />
