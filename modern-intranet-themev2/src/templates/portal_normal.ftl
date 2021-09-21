@@ -30,6 +30,14 @@
 		
 		<div class="${portal_content_css_class} flex-fill pr-6" id="content">
 			<div class="mi-search-bar mt-3 d-flex">
+				<#assign default_preferences = freeMarkerPortletPreferences.getPreferences("portletSetupPortletDecoratorId", "barebone") />
+				<div class="mr-2">
+					<@liferay_portlet["runtime"]
+						defaultPreferences=default_preferences
+						portletProviderAction=portletProviderAction.VIEW
+						portletProviderClassName="com.liferay.portal.kernel.servlet.taglib.ui.LanguageEntry"
+					/> 
+				</div>
 				<div class="mr-2"><@liferay.user_personal_bar /></div>
 				<#assign preferences = freeMarkerPortletPreferences.getPreferences({"portletSetupPortletDecoratorId": "barebone", "destination": "/search"}) />
 				<@liferay.search_bar default_preferences="${preferences}" />
