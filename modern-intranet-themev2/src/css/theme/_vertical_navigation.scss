@@ -179,6 +179,7 @@ body.has-control-menu {
         display: none !important;
     }
     #mi-menu {
+        top: 0 !important;
         left: -375px;
         position: absolute !important;
         &.active {

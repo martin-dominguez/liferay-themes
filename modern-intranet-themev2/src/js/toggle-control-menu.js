@@ -6,4 +6,8 @@ AUI().ready('liferay-store', function () {
 			location.reload();
 		}, 0);
 	}
+
+	if (! document.querySelector('.control-menu-container')) {
+		document.body.classList.remove('has-control-menu');
+	}
 });
